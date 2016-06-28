@@ -1,0 +1,19 @@
+﻿@model NuGetVersion.ViewModels.PackageUploadVM
+@{
+    ViewBag.Title = "Packages.config upload";
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>Please either upload your packages.config or copy and paste into the text box below. Packages.json support will be added in a later release.</p>
+
+@using (Html.BeginForm("UploadPackages", "Version", FormMethod.Post, new { id = "UploadPackagesForm" }))
+{
+    <div class="form-group">
+        <label for="packagesUploadTextArea">Packages Upload Area</label>
+        @Html.TextAreaFor(model => model.TextAreaText, new {@class="form-control", id="packagesUploadTextArea" })
+    </div>
+    <p>
+        <input type="submit" value="Find Updates" />
+    </p>
+}
+

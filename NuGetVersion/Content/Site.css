@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* ensure that the upload text area takes up all available width */
+#packagesUploadTextArea {
+    width: 100%;
+    max-width: 100%
+}
